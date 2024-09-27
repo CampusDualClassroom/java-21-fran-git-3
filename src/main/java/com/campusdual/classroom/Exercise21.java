@@ -6,60 +6,44 @@ import java.util.TreeSet;
 
 public class Exercise21 {
 
-    // Método que crea y devuelve un HashSet
+
     public static Set<String> createHashSet() {
         Set<String> hashSet = new HashSet<>();
-        String[] elements = {
-                "ELEMENT KPRBC",
-                "ELEMENT YPBTM",
-                "ELEMENT AADXU",
-                "ELEMENT RXCGJ",
-                "ELEMENT WYMVD",
-                "ELEMENT WFGEJ",
-                "ELEMENT TYGBS",
-                "ELEMENT MAPTK",
-                "ELEMENT GJXVE",
-                "ELEMENT BAFGL"
-        };
 
-        // Añadir elementos al HashSet
-        for (String element : elements) {
-            hashSet.add(element);
-        }
-
+        addElementToSet(hashSet, "ELEMENT KPRBC");
+        addElementToSet(hashSet, "ELEMENT YPBTM");
+        addElementToSet(hashSet, "ELEMENT AADXU");
+        addElementToSet(hashSet, "ELEMENT RXCGJ");
+        addElementToSet(hashSet, "ELEMENT WYMVD");
+        addElementToSet(hashSet, "ELEMENT WFGEJ");
+        addElementToSet(hashSet, "ELEMENT TYGBS");
+        addElementToSet(hashSet, "ELEMENT MAPTK");
+        addElementToSet(hashSet, "ELEMENT GJXVE");
+        addElementToSet(hashSet, "ELEMENT BAFGL");
         return hashSet;
     }
 
-    // Método que crea y devuelve un TreeSet
+
     public static Set<String> createTreeSet() {
         Set<String> treeSet = new TreeSet<>();
-        String[] elements = {
-                "ELEMENT KPRBC",
-                "ELEMENT YPBTM",
-                "ELEMENT AADXU",
-                "ELEMENT RXCGJ",
-                "ELEMENT WYMVD",
-                "ELEMENT WFGEJ",
-                "ELEMENT TYGBS",
-                "ELEMENT MAPTK",
-                "ELEMENT GJXVE",
-                "ELEMENT BAFGL"
-        };
 
-        // Añadir elementos al TreeSet
-        for (String element : elements) {
-            treeSet.add(element);
-        }
-
+        addElementToSet(treeSet, "ELEMENT KPRBC");
+        addElementToSet(treeSet, "ELEMENT YPBTM");
+        addElementToSet(treeSet, "ELEMENT AADXU");
+        addElementToSet(treeSet, "ELEMENT RXCGJ");
+        addElementToSet(treeSet, "ELEMENT WYMVD");
+        addElementToSet(treeSet, "ELEMENT WFGEJ");
+        addElementToSet(treeSet, "ELEMENT TYGBS");
+        addElementToSet(treeSet, "ELEMENT MAPTK");
+        addElementToSet(treeSet, "ELEMENT GJXVE");
+        addElementToSet(treeSet, "ELEMENT BAFGL");
         return treeSet;
     }
 
-    // Método para añadir un nuevo elemento a un conjunto
     public static boolean addElementToSet(Set<String> set, String element) {
         return set.add(element);
     }
 
-    // Método que recorre y muestra los elementos de un conjunto
     public static void printSet(Set<String> set) {
         for (String element : set) {
             System.out.println(element);
@@ -67,14 +51,13 @@ public class Exercise21 {
     }
 
     public static void main(String[] args) {
-        // Crear HashSet y TreeSet
+        // Crear HashSet
         Set<String> hashSet = createHashSet();
-        Set<String> treeSet = createTreeSet();
-
-        // Imprimir los conjuntos
         System.out.println("HashSet elements:");
         printSet(hashSet);
 
+        // Crear TreeSet
+        Set<String> treeSet = createTreeSet();
         System.out.println("TreeSet elements:");
         printSet(treeSet);
     }
